@@ -6,7 +6,7 @@ node {
 	stage('build') {
 		def mvnHome = tool 'MAVEN'
 		withEnv(["MVN_HOME=$mvnHome"]){
-			bat '"C:/maven/apache-maven-3.9.5/bin/mvn" clean compile package'
+			sh '"C:/maven/apache-maven-3.9.5/bin/mvn" clean compile package'
 		}
 	}
 	
